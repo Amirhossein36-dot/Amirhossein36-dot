@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on: Nothing
 - 📫 How to reach me: This is private 
 - 😄 Pronouns: she/her
-- ⚡ Fun fact: If you put a phone on water, it will probably stop working 
+- ⚡ Fun fact: If you put a phone on water, it will probably stop working (Do not try this for safety)
 
 <!---
 Amirhossein36-dot/Amirhossein36-dot is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
