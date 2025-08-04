@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawing Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #f8f8f8; }
+    h1 { margin-bottom: 10px; }
+    #controls { margin-bottom: 12px; }
+    #drawingCanvas { border: 2px solid #555; background: #fff; cursor: crosshair; }
+  </style>
+</head>
+<body>
+  <h1>Drawing Test</h1>
+  <div id="controls">
+    <label>Color:
+      <input type="color" id="colorPicker" value="#000000">
+    </label>
+    <label>Brush Size:
+      <input type="range" id="brushSize" min="1" max="30" value="3">
+      <span id="sizeDisplay">3</span> px
+    </label>
+    <button id="clearBtn">Clear</button>
+  </div>
+  <canvas id="drawingCanvas" width="600" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+    const colorPicker = document.getElementById('colorPicker');
+    const brushSize = document.getElementById('brushSize');
+    const sizeDisplay = document.getElementById('sizeDisplay');
+    const clearBtn = document.getElementById('clearBtn');
+
+    let drawing = false;
+    let lastX = 0, lastY = 0;
+
+    function getPosition(e) {
+      const rect = canvas.getBoundingClientRect();
+      return {
+        x: (e.touches ? e.touches[0].clientX : e.clientX) - rect.left,
+        y: (e.touches ? e.touches[0].clientY : e.clientY) - rect.top
+      };
+    }
+
+    canvas.addEventListener('mousedown', e => {
+      drawing = true;
+      const pos = getPosition(e);
+      lastX = pos.x;
+      lastY = pos.y;
+    });
+
+    canvas.addEventListener('mousemove', e => {
+      if (!drawing) return;
+      const pos = getPosition(e);
+      ctx.strokeStyle = colorPicker.value;
+      ctx.lineWidth = brushSize.value;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      lastX = pos.x;
+      lastY = pos.y;
+    });
+
+    canvas.addEventListener('mouseup', () => drawing = false);
+    canvas.addEventListener('mouseleave', () => drawing = false);
+
+    // Touch support
+    canvas.addEventListener('touchstart', e => {
+      e.preventDefault();
+      drawing = true;
+      const pos = getPosition(e);
+      lastX = pos.x;
+      lastY = pos.y;
+    }, false);
+
+    canvas.addEventListener('touchmove', e => {
+      e.preventDefault();
+      if (!drawing) return;
+      const pos = getPosition(e);
+      ctx.strokeStyle = colorPicker.value;
+      ctx.lineWidth = brushSize.value;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      lastX = pos.x;
+      lastY = pos.y;
+    }, false);
+
+    canvas.addEventListener('touchend', () => drawing = false);
+    canvas.addEventListener('touchcancel', () => drawing = false);
+
+    brushSize.addEventListener('input', () => {
+      sizeDisplay.textContent = brushSize.value;
+    });
+
+    clearBtn.addEventListener('click', () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+  </script>
+</body>
+</html>
