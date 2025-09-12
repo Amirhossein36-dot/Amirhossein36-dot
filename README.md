@@ -21,8 +21,7 @@
 ---
 [![](https://visitcount.itsvg.in/api?id=Amirhossein36-dot&icon=0&color=0)](https://visitcount.itsvg.in)
 # Discord Server
-![](https://discord.com/api/guilds/1372062285643780176/widget.json) 
-
+<iframe src="https://discord.com/widget?id=1372062285643780176&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
 <!---
