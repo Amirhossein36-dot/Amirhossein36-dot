@@ -3,7 +3,7 @@
 - 👀 I’m interested in: Making YouTube videos, coding<br>
 - 🌱 I’m currently learning: HTML and Coding<br>
 - 💞️ I’m looking to collaborate on: No Company Yet :/<br>
-- 📫 How to reach me: This is private<br>
+- 📫 How to reach me: This is private. check my socials. <br>
 - 😄 Pronouns: any<br>
 - ⚡ Fun fact: If you put a phone on water, it will probably stop working <br>    (Do not try this for safety)
 
