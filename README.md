@@ -1,8 +1,8 @@
 # 💫 About Me:
 - 👋 Hi, I’m @Amirhossein36-dot<br>
-- 👀 I’m interested in: Making YouTube videos<br>
+- 👀 I’m interested in: Making YouTube videos, coding<br>
 - 🌱 I’m currently learning: HTML and Coding<br>
-- 💞️ I’m looking to collaborate on: Nothing<br>
+- 💞️ I’m looking to collaborate on: No Company Yet :/<br>
 - 📫 How to reach me: This is private<br>
 - 😄 Pronouns: any<br>
 - ⚡ Fun fact: If you put a phone on water, it will probably stop working <br>    (Do not try this for safety)
